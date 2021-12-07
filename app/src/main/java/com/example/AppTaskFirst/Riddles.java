@@ -11,7 +11,12 @@ import android.widget.TextView;
 public class Riddles extends AppCompatActivity {
     TextView tvRiddle, tvAnswer;
     EditText edAnswer;
+    Button btnOk;
+    Button btnNewRiddle;
     int counter =0;
+    String riddle1 = "Не огонь,а жжется.";
+    String riddle2 = "Красна девица сидит в темнице,а коса на улице.";
+    String riddle3 = "Жидкое, а не вода, белое, а не снег.";
 
 
     @Override
@@ -21,6 +26,8 @@ public class Riddles extends AppCompatActivity {
         tvRiddle = findViewById(R.id.tvRiddle);
         edAnswer = findViewById(R.id.edAnswer);
         tvAnswer = findViewById(R.id.tvAnswer);
+        btnOk = findViewById(R.id.btnOk);
+        btnNewRiddle = findViewById(R.id.btnNewRiddle);
     }
     public void onClickRiddles(View view){
         String txt1 = "Крапива";
@@ -33,10 +40,13 @@ public class Riddles extends AppCompatActivity {
                     tvAnswer.setText("Верно!");
                 }else{
                     tvAnswer.setText("Не верно!");
-                }
+                } default:
         }
 
 
+
+    }
+    public void onClickNewRiddle(View view){
 
     }
 }
