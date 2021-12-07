@@ -15,6 +15,8 @@ public class BossApp extends AppCompatActivity {
     Button btnMB;
     Button button;
     Button btmRiddles;
+    Button btnCalculator;
+
 
 
     @Override
@@ -25,6 +27,7 @@ public class BossApp extends AppCompatActivity {
         btnMB = findViewById(R.id.btnMB);
         button = findViewById(R.id.button);
         btmRiddles = findViewById(R.id.btmRiddles);
+        btnCalculator = findViewById(R.id.btnCalculator);
         btnMB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,4 +53,11 @@ public class BossApp extends AppCompatActivity {
         Intent intent = new Intent(BossApp.this,Riddles.class);
         startActivity(intent);
     }
+    public void onClickCalculator(View v){
+        cl.setBackgroundColor(Color.YELLOW);
+        btnCalculator.setBackgroundColor(Color.DKGRAY);
+        Intent intent = new Intent(BossApp.this,Calculator.class);
+        startActivity(intent);
+    }
+
 }
