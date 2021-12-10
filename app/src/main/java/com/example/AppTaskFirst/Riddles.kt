@@ -34,15 +34,9 @@ class Riddles : AppCompatActivity() {
         val txt1 = "морковь"
         val txt2 = "молоко"
         when (counter) {
-            0 -> if (edAnswer!!.text.toString() == txt0) {
-                tvAnswer!!.text = "Верно!"
-            } else tvAnswer!!.text = "НЕ верно!"
-            1 -> if (edAnswer!!.text.toString() == txt1) {
-                tvAnswer!!.text = "Верно!"
-            } else tvAnswer!!.text = "НЕ верно!"
-            2 -> if (edAnswer!!.text.toString() == txt2) {
-                tvAnswer!!.text = "Верно!"
-            } else tvAnswer!!.text = "НЕ верно!"
+            0 -> vernoNeVerno(txt0)
+            1 -> vernoNeVerno(txt1)
+            2 -> vernoNeVerno(txt2)
         }
     }
 
@@ -62,5 +56,11 @@ class Riddles : AppCompatActivity() {
                 counter = 2
             }
         }
+    }
+    fun vernoNeVerno(txt:String){
+        if (edAnswer!!.text.toString() == txt) {
+            tvAnswer!!.text = "Верно!"
+        } else tvAnswer!!.text = "НЕ верно!"
+
     }
 }
